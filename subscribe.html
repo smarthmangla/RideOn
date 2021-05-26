@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Subscription</title>
+<link href="sgnup.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <style>
+    #msg {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    right: 35%;
+    top: 30px;
+    font-size: 17px;
+	margin-right:30px;
+}
+
+#msg.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+    </style>
+    <script type="text/javascript" src="reff.js"></script>
+</head>
+
+<body>
+<div class="signup">
+    <form>
+    <h2 class="heding" style="color: #000;">SUBSCRIBE</h2>
+    <input id="name" type="text" name="username" placeholder="First name"><br><br>
+    <input id="email"type="email" name="email" placeholder="Email Address"><br><br>
+    <input id="number" type="number" name="Phnno" placeholder="Phone No"><br><br>    
+    <input id="ride" type="text" name="ride" placeholder="Ride Plan"><br><br>   
+    <input id="address" type="text" name="address" placeholder="Address"><br><br>  
+    <input type="submit" onclick="handleSubmit()" id="submit"><br><br>
+        <div id="msg">Congratulations You have Enrolled successfully!!</div>
+    </form>
+    </div>
+</body>
+</html>
